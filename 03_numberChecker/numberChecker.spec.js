@@ -1,16 +1,22 @@
-const numberChecker = require('./numberChecker')
+const numberCheckerTest = require('./numberChecker')
 
-describe('numberChecker', () => {
-  test('returns true when number is 1000', () => {
-    expect(numberChecker(1000)).toEqual(true);
+describe('number test for true', () => {
+  test('returns true when number is 20', () => {
+    expect(numberCheckerTest(20)).toEqual(true);
   });
-  test.skip('returns true when number is 10', () => {
-    expect(numberChecker(10)).toEqual(true);
+  test('returns true when number is 10', () => {
+    expect(numberCheckerTest(10)).toEqual(true);
   });
-  test.skip('returns false when number is 9', () => {
-    expect(numberChecker(9)).toEqual(false);
+  test('returns true when number is 9', () => {
+    expect(numberCheckerTest(9)).toEqual(true);
   });
-  test.skip('returns false when number is 6', () => {
-    expect(numberChecker(6)).toEqual(false);
+});
+
+describe('number test for false', () => {
+  test('returns false when number is 8', () => {
+    expect(numberCheckerTest(8)).toEqual(false);
+  });
+  test('returns false when number is 21', () => {
+    expect(numberCheckerTest(21)).toEqual(false);
   });
 });
