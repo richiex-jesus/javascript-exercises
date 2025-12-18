@@ -17,13 +17,14 @@
 const removeFromArray = function(arr, ...items) {
 
     // attempt 2:
-    isTrue:
+    // isTrue:
     for (i = 0; i < arr.length; i++) {
         let x = arr[i]
-        if ([...items].includes(x)){
+        if (items.includes(x)){
+            console.log(i)
             arr.splice(i, 1);
             i--;
-        } else continue isTrue;
+        } // else continue isTrue;
     }
 
     return arr;
